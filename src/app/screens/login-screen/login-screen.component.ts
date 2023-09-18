@@ -13,7 +13,7 @@ export class LoginScreenComponent implements OnInit {
   public password: String = "";
 
   public errors:any = {};
-
+  
   constructor(
     private router: Router
   ) { }
