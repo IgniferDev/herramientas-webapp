@@ -18,6 +18,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 //Cambia el idioma a español
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 
+  
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,8 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     FormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    
+  
     
     
   ],
