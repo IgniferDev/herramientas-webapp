@@ -47,6 +47,10 @@ export class LoginScreenComponent implements OnInit {
     this.router.navigate(["registro"]);
   }
 
+  public goProducto(){
+    this.router.navigate(["registro-producto"])
+  }
+
   public goLogin(){
     this.router.navigate(["extra"])
   }

@@ -17,6 +17,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 //Cambia el idioma a español
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { RegistroProductoScreenComponent } from './screens/registro-producto-screen/registro-producto-screen.component';
+
 
   
 @NgModule({
@@ -24,7 +26,8 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     AppComponent,
     LoginScreenComponent,ExtraScreenComponent,
     RegistroScreenComponent,
-    HomeScreenComponent
+    HomeScreenComponent,
+    RegistroProductoScreenComponent
   ],
   imports: [
     BrowserModule,
