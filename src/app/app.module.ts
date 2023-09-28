@@ -1,7 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //Componentes
@@ -15,30 +14,33 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-
-
+import { MatNativeDateModule } from '@angular/material/core';
+//Cambia el idioma a español
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginScreenComponent,
+    LoginScreenComponent,ExtraScreenComponent,
     RegistroScreenComponent,
-    HomeScreenComponent,
-    ExtraScreenComponent
+    HomeScreenComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatButtonModule,
+    MatButtonModule,  
     MatIconModule,
     FormsModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatNativeDateModule,
     
     
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'es-ES'},
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
