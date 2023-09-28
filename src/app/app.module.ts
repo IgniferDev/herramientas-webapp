@@ -18,6 +18,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 //Cambia el idioma a español
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { RegistroProductoScreenComponent } from './screens/registro-producto-screen/registro-producto-screen.component';
+import { NgxMaskModule,IConfig } from 'ngx-mask';
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
 
   
@@ -39,6 +41,7 @@ import { RegistroProductoScreenComponent } from './screens/registro-producto-scr
     FormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    NgxMaskModule.forRoot(options),
     
   
     

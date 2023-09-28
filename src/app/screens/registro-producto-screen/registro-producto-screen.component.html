@@ -13,7 +13,7 @@
             <div class="inputs">
                 <mat-form-field class="mat-input" appearance="outline">
                     <mat-label>id</mat-label>
-                    <input matInput [(ngModel)]="product.id"  placeholder="Escribe ID">
+                    <input matInput [(ngModel)]="product.id" mask='000-000'  placeholder="Escribe ID">
                 </mat-form-field>
                 <div *ngIf="errors.id" class="invalid-feedback">{{ errors.id }}</div>
 
@@ -25,7 +25,7 @@
 
                 <mat-form-field class="mat-input" appearance="outline">
                     <mat-label>Precio</mat-label>
-                    <input matInput [(ngModel)]="product.precio"  placeholder="Escribe precio">
+                    <input matInput [(ngModel)]="product.precio" mask='000.00' placeholder="Escribe precio">
                 </mat-form-field>
                 <div *ngIf="errors.precio" class="invalid-feedback">{{ errors.precio }}</div>
 
