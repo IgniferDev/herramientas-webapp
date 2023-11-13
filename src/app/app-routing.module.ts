@@ -11,6 +11,7 @@ const routes: Routes = [
   //Aquí se agregan cada una de las rutas del proyecto
   { path: '', component: LoginScreenComponent, pathMatch: 'full' },
   { path: 'registro', component: RegistroScreenComponent, pathMatch: 'full' },
+  { path: 'registro/:id', component: RegistroScreenComponent, pathMatch: 'full' },
   { path: 'home', component: HomeScreenComponent, pathMatch: 'full' },
   { path: 'extra', component: ExtraScreenComponent, pathMatch: 'full'},
   { path: 'registro-producto', component: RegistroProductoScreenComponent, pathMatch: 'full'}

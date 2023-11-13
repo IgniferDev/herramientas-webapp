@@ -22,6 +22,8 @@ export class RegistroProductoScreenComponent {
   ){  }
 
   ngOnInit():void {
+
+    
     this.product = this.productosService.esquemaProduct();
     console.log("Producto", this.product);
 
