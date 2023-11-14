@@ -91,6 +91,7 @@ export class HomeScreenComponent implements OnInit {
   }
 //Función para eliminar
 public delete(idUser: number){
+  console.log("User:", idUser);
   const dialogRef = this.dialog.open(EliminarUserModalComponent,{
     data: {id: idUser}, //Se pasan valores a través del componente
     height: '268px',
@@ -102,6 +103,7 @@ public delete(idUser: number){
       //Recargar página
       window.location.reload();
     }else{
+      alert("Usuario no eliminado ");
       console.log("No se eliminó el usuario");
       //alert("No se eliminó el usuario");
     }
