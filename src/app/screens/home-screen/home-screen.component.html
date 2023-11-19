@@ -3,7 +3,7 @@
         <div class="section-home">
             <div class="header-home">
                 <!--<p class="hide">cersdfsdasdfsdfasdasesion  </p>-->
-                <button  mat-flat-button class="materia">Cambiar a Materias</button>
+                <button  mat-flat-button class="materia" (click)="goMaterias()">Registrar Materias</button>
                 <!--<mat-icon class="icon-back" (click)="logout()">arrow_back</mat-icon>-->
                 <span class="title">Lista de usuarios</span>
                 <button class="logout" mat-flat-button color="warn" (click)="logout()">Cerrar sesion</button>
@@ -79,6 +79,8 @@
                     </mat-paginator>
                                  
                 </div>  
+
+                <button class="btn btn-danger" (click)="goTabla()">Tabla de Materias</button>
             </div>
         </div>
     </div>

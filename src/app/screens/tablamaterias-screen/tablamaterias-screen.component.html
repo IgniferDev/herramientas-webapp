@@ -1,0 +1,80 @@
+<section class="tabla-page">
+    <div class="wrapper">
+        <div class="section-tabla">
+            <div class="header-tabla">
+                <button class="logout-hide" mat-flat-button color="red"  >Registrar a Home</button>
+                <!--<mat-icon class="icon-back" (click)="logout()">arrow_back</mat-icon>-->
+                <span class="title">Lista de Materias</span>
+                <button class="back" mat-flat-button color="warn" (click)="goHome()">Regresar a Home</button>
+            </div>
+            <div class="body-tablamaterias">
+                <div class="mat-elevation-z8">
+                    <table mat-table [dataSource]="dataSource">
+                        <ng-container matColumnDef="nrc">
+                            <th mat-header-cell *matHeaderCellDef> NRC </th>
+                            <td mat-cell *matCellDef="let element"> {{element.nrc}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="nombre_materia">
+                            <th mat-header-cell *matHeaderCellDef> Materia </th>
+                            <td mat-cell *matCellDef="let element"> {{element.nombre_materia}}</td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="seccion">
+                            <th mat-header-cell *matHeaderCellDef> Seccion </th>
+                            <td mat-cell *matCellDef="let element"> {{element.seccion}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="dias">
+                            <th mat-header-cell *matHeaderCellDef> Dias </th>
+                            <td mat-cell *matCellDef="let element"> {{element.dias}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="horai">
+                            <th mat-header-cell *matHeaderCellDef> Horario </th>
+                            <td mat-cell *matCellDef="let element"> {{element.horai}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="horaf">
+                            <th mat-header-cell *matHeaderCellDef> Horario Final </th>
+                            <td mat-cell *matCellDef="let element"> {{element.horaf}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="salon">
+                            <th mat-header-cell *matHeaderCellDef> Salon </th>
+                            <td mat-cell *matCellDef="let element"> {{element.salon}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="carrera">
+                            <th mat-header-cell *matHeaderCellDef> Carrera </th>
+                            <td mat-cell *matCellDef="let element"> {{element.carrera}} </td>
+                        </ng-container>
+                        
+                        
+                        <ng-container matColumnDef="editar">
+                            <th mat-header-cell *matHeaderCellDef> Actualizar </th>
+                            <td mat-cell *matCellDef="let element" class="td-editar">
+                                <i class="bi bi-pencil-square" (click)="goEditar(element.id)"></i> 
+                            </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="eliminar">
+                            <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+                            <td mat-cell *matCellDef="let element" class="td-eliminar"> 
+                                <i class="bi bi-trash3-fill" (click)="delete(element.id)"></i>
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                                   showFirstLastButtons
+                                   aria-label="Select page of periodic elements">
+                    </mat-paginator>
+                                 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

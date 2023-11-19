@@ -16,6 +16,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDialogModule} from '@angular/material/dialog';
 //Cambia el idioma a español
@@ -25,6 +26,12 @@ import { NgxMaskModule,IConfig } from 'ngx-mask';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { EliminarUserModalComponent } from './modals/eliminar-user-modal/eliminar-user-modal.component';
+import { MateriasScreenComponent } from './screens/materias-screen/materias-screen.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { TablamateriasScreenComponent } from './screens/tablamaterias-screen/tablamaterias-screen.component';
+import { EliminarMateriaModalComponent } from './modals/eliminar-materia-modal/eliminar-materia-modal.component';
+//PARA EL RELOJ DE COREUI
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
@@ -37,7 +44,10 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     RegistroScreenComponent,
     HomeScreenComponent,
     RegistroProductoScreenComponent,
-    EliminarUserModalComponent
+    EliminarUserModalComponent,
+    MateriasScreenComponent,
+    TablamateriasScreenComponent,
+    EliminarMateriaModalComponent
   ],
   imports: [
     BrowserModule,
@@ -49,11 +59,16 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     FormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule,
     NgxMaskModule.forRoot(options),
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
-    MatDialogModule,
+    MatDialogModule, 
+    NgxMaterialTimepickerModule,//PARA EL RELOJ SE HIZO npm install --save ngx-material-timepicker YT
+    MatFormFieldModule, //PARA EL SEGUNDO RELOJ DEL INPUT EL DEL PROFE
+
+  
     
   
     

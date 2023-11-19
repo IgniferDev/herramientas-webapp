@@ -9,7 +9,7 @@
     background-color: #FFFFFF;
     overflow-x: hidden;
 }
-.section-home{
+.section-tabla{
     width: 100%;
     height: 100%;
     display: flex;
@@ -17,7 +17,7 @@
     justify-content: flex-start;
     align-items: center;
 }
-.header-home{
+.header-tabla{
     width: 100%;
     height: 10vh;
     padding-left: 2rem;
@@ -26,7 +26,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #0092B8;
+    background-color: rgb(88, 31, 10);
 }
 .icon-back{
     padding-left: 1.5rem;
@@ -52,7 +52,7 @@
     font-weight: bold;
     color: #FFFFFF;
 }
-.body-home{
+.body-tablamaterias{
     width: 90%;
     height: 90vh;
     display: flex;
@@ -87,18 +87,16 @@ table {
 }
 
 
-.materia{
-    color: #0092B8!important;
-    background-color: #ffffff;
-    border: none;
-    cursor: auto;
+.logout-hide{
+    color: rgb(88, 31, 10)!important;
+    background-color: rgb(88, 31, 10);    
 }
 .logout{
-    background-color: #E84150;
+    background-color: #41aee8;
     font-family: Nexa;
 }
 .logout:hover{
-    background-color: #ce1626;
+    background-color: #167ece;
 }
 
 

@@ -51,6 +51,16 @@ export class HomeScreenComponent implements OnInit {
   }
 
 
+  public goMaterias(){
+    this.router.navigate(["materias"]);
+    //console.log("va a MATERIAS");
+    
+  }
+
+  public goTabla(){
+    this.router.navigate(["tablamaterias"])
+  }
+
   public logout(){
     this.facadeService.logout().subscribe(
       (response)=>{
