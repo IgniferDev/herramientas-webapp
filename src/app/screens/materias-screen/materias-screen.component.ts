@@ -20,7 +20,7 @@ export class MateriasScreenComponent implements OnInit {
   public materia: any = {};
   public errors:any={};
   public selectedValuecarrera: string ="";
-  public selectedValuedia: string ="";
+  public selectedValuedia: String = "";
   public token : String =""; 
   public idMateria: number = 0; //variable para el boton de editar
 
@@ -80,8 +80,8 @@ export class MateriasScreenComponent implements OnInit {
     console.log("Pasó la validación");
     this.materiasService.editarMateria(this.materia).subscribe(
       (response)=>{
-        alert("Usuario editado correctamente");
-        console.log("Usuario editado: ", response);
+        alert("Materia editada correctamente");
+        console.log("Materia editada: ", response);
         //Si se editó, entonces mandar al home
         this.router.navigate(["tablamaterias"]);
       }, (error)=>{
@@ -98,9 +98,9 @@ export class MateriasScreenComponent implements OnInit {
         //Agregamos valores faltantes
         this.materia.horai = response.horai.split ("SS")[0];
         
-        console.log("Datos user: ", this.materia);
+        console.log("Datos materia: ", this.materia);
       }, (error)=>{
-        alert("No se pudieron obtener los datos del usuario para editar");
+        alert("No se pudieron obtener los datos de la materia para editar");
       }
     );
   }

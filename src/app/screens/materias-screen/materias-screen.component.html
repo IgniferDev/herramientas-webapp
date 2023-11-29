@@ -30,7 +30,7 @@
                 <mat-form-field class="mat-input" appearance="outline">
                     <mat-label>Dias</mat-label>
                     
-                    <!--<mat-select [(ngModel)]="materia.dias"  placeholder="Selecciona Dias" type="string" [(value)]="selectedValuedia" multiple>
+                    <!--<mat-select [(ngModel)]="materia.dias"  placeholder="Selecciona Dias" [(value)]="selectedValuedia" type="string" multiple >
                         <mat-option *ngFor="let dia of dias" [value]="dia">{{ dia }}</mat-option>
                     </mat-select>-->
 
@@ -54,13 +54,11 @@
 
                 <mat-form-field class="mat-input" appearance="outline">
                     <mat-label>Hora Final</mat-label>
-                    
-                    
 
 
-                    <!--<input matInput placeholder="Time" [ngxTimepicker]="picker" type="string" [(ngModel)]="materia.horaf">
-                    <ngx-material-timepicker #picker></ngx-material-timepicker>-->
-                    <input matInput [(ngModel)]="materia.horaf"  placeholder="Escribe hora final">
+                    <input matInput placeholder="Time" [ngxTimepicker]="picker1" type="string" [(ngModel)]="materia.horaf">
+                    <ngx-material-timepicker #picker1></ngx-material-timepicker>
+                    <!--<input matInput [(ngModel)]="materia.horaf"  placeholder="Escribe hora final">-->
                 </mat-form-field>
                 <div *ngIf="errors.horaf" class="invalid-feedback">{{ errors.horaf }}</div>
 
